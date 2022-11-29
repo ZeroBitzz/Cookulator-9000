@@ -10,11 +10,17 @@ initialButton.addEventListener("click", jsGame)
 let gameSection =               document.getElementById("game-content-section")
 let incorrectAnswerElement =    document.getElementById("incorrect-score")
 let correctAnswerElement =      document.getElementById("correct-score")
+let endGameSectionElm = document.getElementById("end-game-section")
+let scoreElement = document.getElementById("score-span")
+let retryButtonElement = document.getElementById("retry-button")
 
 // EXPORTS FOR ASK QUESTIONS MODULE AND THIS ONE
 export let questionsLeft = 8
 export let incorrectAnswers = 0
 export let correctAnswers = 0
+
+// RELOAD PAGE HELPER FUNCTION
+function reloadPage(){location.reload()} // reloads page when called
 
 // FUNCTIONS FOR DETERMINING CORRECT AND INCORRECT ANSWERS
 export function incorrectAnswer(){ // function if answer selected is incorrect
@@ -31,21 +37,17 @@ export function correctAnswer(){ // function if answer selected is correct
 
 // MAIN JS GAME FUNCTION
 function jsGame(){
-    document.getElementById("initial-screen-section").style.display = "none"
-    gameSection.style.display = "flex"
-    askQuestion()   
+    document.getElementById("initial-screen-section").style.display = "none" // removes initial screen
+    gameSection.style.display = "flex" // displays game screen
+    askQuestion() // starts asking questions(see askquestion in other file for details)
 }
 
-// END GAME FUNCTION, RELOAD PAGE HELPER FUNCTION, AND VARIABLES FOR END GAME FUNCTION
-function reloadPage(){location.reload()} // reloads page when called
-let endGameSectionElm = document.getElementById("end-game-section")
-let scoreElement = document.getElementById("score-span")
-let retryButtonElement = document.getElementById("retry-button")
+// END GAME FUNCTION
 export function endGame(){
     retryButtonElement.addEventListener("click", reloadPage) // reloads the page when button is clicked
     endGameSectionElm.style.display = "flex" // displays end game section
     gameSection.style.display = "none" // hides main game section
     scoreElement.style.display = "flex" // displays score element
-    correctAnswerElement.innerHTML = "correct answers: " + correctAnswers
-    incorrectAnswerElement.innerHTML = "incorrect answers: " + incorrectAnswers
+    correctAnswerElement.innerHTML = "correct answers: " + correctAnswers // correct answers element
+    incorrectAnswerElement.innerHTML = "incorrect answers: " + incorrectAnswers // incorrect answers element
 }

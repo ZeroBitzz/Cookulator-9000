@@ -45,7 +45,7 @@ function removeElmFromArr(removeElmArr, elmToRemove){
     return newArr
 }
 
-// FUNCTION THAT GENERATES RANDOM QUESTION
+// MAIN FUNCTION THAT GENERATES RANDOM QUESTION
 export function askQuestion(){
     // CHECKS IF THERE ARE NO QUESTIONS LEFT TO ASK. IF THERE ARE NONE, STOP THE GAME
     questionsLeft === 0 ? endGame() : null
@@ -57,8 +57,8 @@ export function askQuestion(){
     
     // SETS WHICH CURRENT ARRAYS ARE BEING USED FOR QUESTION AND ANSWER, AND REMOVES THE QUESTION FROM THE ARRAY SO IT DOESNT REPEAT
     let randArrIndex = Math.floor(Math.random() * questionIndex.questions.length) // keeps the answers linked to the corresponding question
-    let currentAnswerArr = questionIndex.answers[randArrIndex] //gets answers
-    let currentQuestion = questionIndex.questions[randArrIndex] // gets question
+    let currentAnswerArr = questionIndex.answers[randArrIndex] // gets some answers
+    let currentQuestion = questionIndex.questions[randArrIndex] // gets corresponding question
     questionIndex.questions = removeElmFromArr(questionIndex.questions, currentQuestion) // removes question
     questionEl.innerHTML = currentQuestion // displays the current question on the page
     
