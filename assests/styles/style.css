@@ -1,0 +1,169 @@
+/* 
+-----------INDEX------------
+BASIC TAGS          [LINE 11]
+INITIAL SCREEN      [LINE 29]
+GAME ELEMENTS       [LINE 62]
+END GAME ELEMENTS   [LINE 108]
+HIGHSCORES SECTION  [LINE 134]
+INITIALS FORM       [LINE 147]
+*/
+
+/* BASIC TAGS */
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 101);
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    width: 230px;
+}
+
+/* INITIAL SCREEN */
+#initial-screen-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    order: 0;
+}
+
+#initial-title-h1 {
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+#initial-span {
+    font-size: 20px;
+}
+
+#initial-desc {
+    width: 700px;
+}
+
+#initial-button {
+    background-color: rgb(255, 255, 101);
+    color: black;
+    font-size: 30px;
+    width: 120px;
+    border-radius: 10px;
+}
+#initial-button:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+/* GAME ELEMENTS */
+#time { 
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: black;
+    color: rgb(255, 255, 101);
+}
+
+#game-content-section {
+    background-color: rgb(44, 44, 44);
+    padding: 5px;
+    margin-top: 500px;
+    margin-left: 30%px;
+    margin-right: 5px;
+    border-radius: 10px;
+    left: 100px;
+    font-size: 30px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    order: 0;
+}
+
+#game-question {
+    margin-bottom: 0px;
+}
+
+.answer-button {
+    background-color: black;
+    color: rgb(255, 255, 101);
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.answer-button:hover {
+    color: black;
+    background-color: rgb(255, 255, 101);
+    cursor: pointer;
+}
+
+/* END GAME ELEMENTS */
+#end-game-section {
+    display: none;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+#retry-button {
+    background-color: rgb(255, 255, 101);
+    color: black;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    width: fit-content;
+}
+#retry-button:hover {
+    background-color: grey;
+    color: rgb(255, 255, 101);
+    cursor: pointer;
+}
+
+#score-span {
+    display: none;
+    text-decoration: underline;
+}
+
+/* HIGHSCORES SECTION */
+
+#highscores-section {
+    margin-top: 200px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#highscores-title {
+    text-decoration: underline;
+}
+
+/* INITIALS FORM */
+#initials-form {
+    display: none;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#initials-input {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+    color: rgb(255, 255, 101);
+    background-color: rgb(44, 44, 44);
+}
+
+#submit-button {
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(255, 255, 101);
+}
