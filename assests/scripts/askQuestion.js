@@ -3,35 +3,35 @@ import {
     questionsLeft, incorrectAnswer, correctAnswer, endGame
 } from "./main.js"
 
-// GLOBAL VARIABLES
-export let answer1Correct, answer2Correct, answer3Correct, answer4Correct = false
-let questionEl = document.getElementById("game-question")
+// CORRECT ANSWER VARIABLES AND DOM VARIABLES
+export let answer1Correct, answer2Correct, answer3Correct, answer4Correct = false // boolean determining which one of the questions is correct. It's reset here so they don't overlap
 export let answer1 = document.getElementById("answer1")
 export let answer2 = document.getElementById("answer2")
 export let answer3 = document.getElementById("answer3")
 export let answer4 = document.getElementById("answer4")
+let questionEl = document.getElementById("game-question")
 
 let questionIndex = { // object containing questions and answers for game
     questions: [
-        "What type is this: \"word\"",
-        "What type is this: 42",
-        "What type is true or false?",
-        "Java and Javascript are the same thing.",
-        "I want to repeat a complex set of tasks, I should use a",
-        "I want to save the value 3.14 for later, I should use a",
-        "I want to scan each value in an array, I should use a",
-        "I want to log the alternate realities I have been to, I should use a",
+        "Question1",
+        "Question2",
+        "Question3",
+        "Question4",
+        "Question5",
+        "Question6",
+        "Question7",
+        "Question8",
     ],
     
-    answers: [
-        ["String", "Integer", "Boolean", "Ternary"],
-        ["Integer", "String", "Boolean", "Ternary"],
-        ["Boolean", "Integer", "String", "Ternary"],
-        ["False", "True", "I dont know", "Obscure question"],
-        ["Function", "Interdimensional Portal", "Method", "Constructor"],
-        ["Variable", "Array", "A box", "Function"],
-        ["Loop", "Function", "Scanner", "Constructor"],
-        ["Array", "String", "Toilet", "Method"]
+    answers: [ // the first value is always the correct one( its randomized when its asked later )
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
+        ["Correct", "incorrect1", "incorrect2", "incorrect3"]
     ]
 } 
 
@@ -76,7 +76,7 @@ export function askQuestion(){
         answer4Correct = false
     }else{answer4.removeEventListener("click", incorrectAnswer)}
 
-    // RAND ARR INDEX KEEPS THE QUESTION AND ANSWER VARIABLES TALKING ABOUT THE SAME THING
+    // RAND ARR INDEX KEEPS THE QUESTION AND ANSWER VARIABLES LINKED
     let randArrIndex = Math.floor(Math.random() * questionIndex.questions.length)
 
     // SETS WHICH CURRENT ARRAYS ARE BEING USED FOR QUESTION AND ANSWER, AND REMOVES THE QUESTION FROM THE ARRAY SO IT DOESNT REPEAT

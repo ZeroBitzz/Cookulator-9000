@@ -1,21 +1,12 @@
-/* 
------------INDEX------------
-BASIC TAGS          [LINE 11]
-INITIAL SCREEN      [LINE 29]
-GAME ELEMENTS       [LINE 62]
-END GAME ELEMENTS   [LINE 108]
-HIGHSCORES SECTION  [LINE 134]
-INITIALS FORM       [LINE 147]
-*/
 
 /* BASIC TAGS */
 * {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(255, 255, 101);
+    color: rgb(0, 255, 0);
 }
 
 body {
-    background-color: black;
+    background-color: rgb(34, 34, 34);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,7 +39,7 @@ h2 {
 }
 
 #initial-button {
-    background-color: rgb(255, 255, 101);
+    background-color: rgb(0, 255, 0);
     color: black;
     font-size: 30px;
     width: 120px;
@@ -60,16 +51,6 @@ h2 {
 }
 
 /* GAME ELEMENTS */
-#time { 
-    font-size: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: black;
-    color: rgb(255, 255, 101);
-}
 
 #game-content-section {
     background-color: rgb(44, 44, 44);
@@ -92,7 +73,7 @@ h2 {
 
 .answer-button {
     background-color: black;
-    color: rgb(255, 255, 101);
+    color: rgb(0, 255, 0);
     font-size: 20px;
     width: 200px;
     height: 50px;
@@ -101,7 +82,7 @@ h2 {
 }
 .answer-button:hover {
     color: black;
-    background-color: rgb(255, 255, 101);
+    background-color: rgb(0, 255, 0);
     cursor: pointer;
 }
 
@@ -113,7 +94,7 @@ h2 {
 }
 
 #retry-button {
-    background-color: rgb(255, 255, 101);
+    background-color: rgb(0, 255, 0);
     color: black;
     padding-right: 5px;
     padding-left: 5px;
@@ -122,48 +103,11 @@ h2 {
 }
 #retry-button:hover {
     background-color: grey;
-    color: rgb(255, 255, 101);
+    color: rgb(0, 255, 0);
     cursor: pointer;
 }
 
 #score-span {
     display: none;
     text-decoration: underline;
-}
-
-/* HIGHSCORES SECTION */
-
-#highscores-section {
-    margin-top: 200px;
-    font-size: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-#highscores-title {
-    text-decoration: underline;
-}
-
-/* INITIALS FORM */
-#initials-form {
-    display: none;
-    flex-direction: column;
-    margin-top: 100px;
-}
-
-#initials-input {
-    width: 200px;
-    height: 30px;
-    font-size: 20px;
-    color: rgb(255, 255, 101);
-    background-color: rgb(44, 44, 44);
-}
-
-#submit-button {
-    width: 150px;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 10px;
-    color: black;
-    background-color: rgb(255, 255, 101);
 }
