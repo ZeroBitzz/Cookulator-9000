@@ -76,10 +76,6 @@ export function askQuestion(){
 
     // GRABS A RANDOM ANSWER TO PUT IN BUTTON ELEMENT, THEN REMOVES THAT ELEMENT SO THERE IS NO DUPLICATES(THIS IS REPEATED FOR EVERY BUTTON WITH AN ANSWER IN IT)
     let randAnswer = currentAnswerArr[Math.floor(Math.random() * currentAnswerArr.length)]
-    // currentAnswerArr = removeElmFromArr(currentAnswerArr, randAnswer)
-    // answer1.innerHTML = randAnswer
-
-
     
     // FOR LOOP DETERMINING IF THE ANSWER IS CORRECT OR NOT TO ADD THE CORRESPONDING EVENT LISTENER
     for(let i= 0; i<answerArr.length; i++){
