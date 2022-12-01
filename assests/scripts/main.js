@@ -1,5 +1,6 @@
 // IMPORTS
-import { askQuestion } from './askQuestion.js'
+import  {askQuestion}  from './askQuestion.js'
+
 
 // EVENT LISTENER TO START THE GAME
 let initialButton = document.getElementById("initial-button")
@@ -50,4 +51,14 @@ export function endGame(){
     scoreElement.style.display = "flex" // displays score element
     correctAnswerElement.innerHTML = "correct answers: " + correctAnswers // correct answers element
     incorrectAnswerElement.innerHTML = "incorrect answers: " + incorrectAnswers // incorrect answers element
+
+}
+// the API
+export function showRecepie() {
+    document.getElementById("random-recepie")
+    fetch('https://www.themealdb.com/api/json/v1/1/random.php?key=1')
+    .then(res => {
+        return res.json()
+    })
+    
 }
