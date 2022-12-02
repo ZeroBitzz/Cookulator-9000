@@ -51,14 +51,37 @@ export function endGame(){
     scoreElement.style.display = "flex" // displays score element
     correctAnswerElement.innerHTML = "correct answers: " + correctAnswers // correct answers element
     incorrectAnswerElement.innerHTML = "incorrect answers: " + incorrectAnswers // incorrect answers element
+}
 
-}
+
 // the API
-export function showRecepie() {
-    document.getElementById("random-recepie")
-    fetch('https://www.themealdb.com/api/json/v1/1/random.php?key=1')
-    .then(res => {
-        return res.json()
-    })
+
+function showRecepie() {
+        var textPopUp = document.getElementById("random-recepie")
+            fetch('www.themealdb.com/api/json/v1/1/random.php',{
+                })
+                .then(function (response) {
+                return response.json();
+                })
+                .then(function (data) {
+                // Use the console to examine the response
+                console.log(data);
+                })
+            for (var i = 0; i < data.length; i++) {
+                var title = document.createElement('h3')
+                var ingredients = document.createElement('p')
+                var recipeBulk = document.createElement('p')
+
+                title.textcontent = data[i].idMeal
+                ingredients.textContent = data[i].strMealThumb
+                recipeBulk.textContent = data[i].strInstructions
+
+
+                textPopUp.append(title)
+                textPopUp.append(ingredients)
+                textPopUp.append(recipeBulk)
+            }
     
-}
+    }
+    
+

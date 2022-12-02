@@ -113,6 +113,7 @@ h2 {
 }
 
 #random-recepie {
+    display: flex;
     background-color:blueviolet;
     color:rgb(255, 0, 242);
     text-decoration: underline;
