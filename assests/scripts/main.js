@@ -56,32 +56,53 @@ export function endGame(){
 
 // the API
 
-function showRecepie() {
-        var textPopUp = document.getElementById("random-recepie")
-            fetch('www.themealdb.com/api/json/v1/1/random.php',{
-                })
-                .then(function (response) {
-                return response.json();
+function showRecipe(country) {
+        var textPopUp = document.getElementById("random-recepie-title")
+        var textPopIng = document.getElementById("random-recepie-ing")
+        var textPopMes = document.getElementById("random-recepie-mes")
+        var bulkText = document.getElementById("howToDo")
+            fetch('https://www.themealdb.com/api/json/v1/1/random.php?key=1')
+            .then(function (response) {
+                  return response.json()
                 })
                 .then(function (data) {
                 // Use the console to examine the response
                 console.log(data);
-                })
-            for (var i = 0; i < data.length; i++) {
-                var title = document.createElement('h3')
-                var ingredients = document.createElement('p')
-                var recipeBulk = document.createElement('p')
+                
+                const rawDataJSON = (data);
+                
+                var title = document.createElement("h4");
+                var ingredients = document.createElement("h4");
+                var recipeBulk = document.createElement("h5");
+                var measurements = document.createElement("h6");
 
-                title.textcontent = data[i].idMeal
-                ingredients.textContent = data[i].strMealThumb
-                recipeBulk.textContent = data[i].strInstructions
+                title.innerHTML = data.meals[0].strMeal;
+                ingredients.innerHTML = data.meals[0].strIngredient1;
+                measurements.innerHTML = data.meals[0].strMeasure1;
+                recipeBulk.innerHTML = data.meals[0].strInstructions;
 
-
-                textPopUp.append(title)
-                textPopUp.append(ingredients)
-                textPopUp.append(recipeBulk)
+                textPopUp.append(title);
+                textPopIng.append(ingredients);
+                textPopMes.append(measurements);
+                bulkText.append(recipeBulk);
+            })
             }
-    
-    }
-    
+            // fetch(`https://restcountries.com/v2/alpha/${country}`)
+            // .then(function (response) {
+            //   return response.json()
+            // })
+            // .then(function (data) {
+            //   console.log(data, "country info")
+             
+            //     var ingredients = document.createElement("div")
+            //     var recipeBulk = document.createElement("p")
 
+            //     ingredients.innerHTML = `<img src=${data.flag}></img>`
+            //     recipeBulk.textContent = data.name
+
+            //     textPopUp.append(recipeBulk)
+            //     textPopUp.append(ingredients)
+    //         })
+    // }
+    
+showRecipe()
