@@ -117,6 +117,13 @@ h2 {
     text-decoration: underline;
 }
 
+#random-recepie {
+    display: flex;
+    /* background-color:blueviolet; */
+    color:rgb(255, 0, 242);
+    text-decoration: underline;
+}
+
 .Chef {
   display: block;
   margin-left: auto;
