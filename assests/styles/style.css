@@ -2,7 +2,8 @@
 /* BASIC TAGS */
 * {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: rgb(0, 255, 0);
+    color: rgb(199, 173, 26);
+    text-align: center;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     justify-content: center;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 h2 {
@@ -32,18 +34,21 @@ h2 {
 
 #initial-span {
     font-size: 20px;
+    
 }
 
 #initial-desc {
     width: 700px;
+    
 }
 
 #initial-button {
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(228, 20, 20);
     color: black;
     font-size: 30px;
     width: 120px;
-    border-radius: 10px;
+    border-radius: 90px;
+    
 }
 #initial-button:hover {
     background-color: grey;
@@ -94,7 +99,7 @@ h2 {
 }
 
 #retry-button {
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(230, 29, 22);
     color: black;
     padding-right: 5px;
     padding-left: 5px;
@@ -118,3 +123,65 @@ h2 {
     color:rgb(255, 0, 242);
     text-decoration: underline;
 }
+
+.Chef {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  object-fit: cover;
+  border: 30px solid rgb(199, 173, 26);
+}
+
+body {
+  
+    background-color: white;
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.lowertxt {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+.cookulator {
+    font-size: 500px;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+.initial-span {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.Results {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:39%;
+    object-fit: cover;
+    border: 5px solid rgb(199, 173, 26);
+}
+
+.retry {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
