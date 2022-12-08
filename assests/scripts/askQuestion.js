@@ -78,3 +78,4 @@ export function askQuestion(){
     // REMOVES THE ANSWERS FROM ANSWER ARRAY IN QUESTION INDEX SO THEY DONT REPEAT
     questionIndex.answers.splice(randArrIndex, 1)
 }
+

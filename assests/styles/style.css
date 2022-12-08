@@ -111,3 +111,10 @@ h2 {
     display: none;
     text-decoration: underline;
 }
+
+#random-recepie {
+    display: flex;
+    /* background-color:blueviolet; */
+    color:rgb(255, 0, 242);
+    text-decoration: underline;
+}
