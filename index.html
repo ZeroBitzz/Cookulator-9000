@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assests/styles/style.css" rel="stylesheet">
-    <!-- link to api's -->
-    <!-- <link href="www.themealdb.com/api/json/v1/1/random.php"> -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     
-    <title>Cooking Quiz</title>
+    <title>COOKULATOR9000</title>
 </head>
 <body>
+    <!-- TIME API -->
+    <time id="time"></time>
+
     <!-- INITIAL MENU SCREEN SECTION -->
     <section id="initial-screen-section">
         <h1 id="initial-title-h1">COOKULATOR9000</h1>
-        <img src="cooker.jpg.jpg" alt="TheChef" class="Chef" width="500" height="500">
+        <img src="/assests/images/cooker.jpg.jpg" alt="TheChef" class="Chef" width="500" height="500">
         <div id="initial-desc">
             <span id="initial-span" >
              
@@ -35,16 +37,20 @@
 
     <!-- GAME OVER SECTION -->
     <section id="end-game-section">
-        <img src="results.jpg" alt="TheChef" class="Results" width="500" height="500">
+        <img src="/assests/images/results.jpg" alt="TheChef" class="Results" width="500" height="500">
         <span id="score-span"></span>
         <span id="time-score"></span>
         <span id="correct-score"></span>
         <span id="incorrect-score"></span>
 
-        <div id="random-recepie-title"></div>
-        <div id="random-recepie-ing"></div>
-        <div id="random-recepie-mes"></div>
-        <div id="howToDo"></div>
+        <span>you got</span>
+        <span id="random-recipe-title"></span>
+        <span>ingredients</span>
+        <span id="random-recipe-ingredients"></span>
+        <span>measurements</span>
+        <span id="random-recipe-measurements"></span>
+        <span>instructions</span>
+        <span id="random-recipe-instruction"></span>
 
         <span id="retry-button" class="retry">RETRY</span>
     </section>
