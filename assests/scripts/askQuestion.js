@@ -14,25 +14,25 @@ let answerBoolArr = [false, false, false, false] // each value is telling which 
 
 let questionIndex = { // object containing questions and answers for game
     questions: [ // questions array. The questions themselves don't matter, only the order. The first question lines up with the first set of answers, and so forth
-        "Question1",
-        "Question2",
-        "Question3",
-        "Question4",
-        "Question5",
-        "Question6",
-        "Question7",
-        "Question8",
+        "What is the term for frying food in a little hot fat",
+        "What is the main ingredient in Extra Virgin Olive Oil",
+        "What is the only food that lasts forever",
+        "What is the temperature danger zone",
+        "Where does raw food need to be stored in relation to cooked food",
+        "What color is a Fuji apple",
+        "What is a common food allergen",
+        "What would be considered a bussin condiment for ramen",
     ],
     
     answers: [ // the first value is always the correct one( its randomized when its asked later )
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"],
-        ["Correct", "incorrect1", "incorrect2", "incorrect3"]
+        ["saute", "fat cookin", "simmer", "pastry"],
+        ["Olives", "Grapes", "Almonds", "Virgins"],
+        ["Honey", "Apples", "Bread", "Milk"],
+        ["40-140", "100-200", "30-80", "5-9"],
+        ["Below the cooked foods", "Above the cooked foods", "inside the cooked food", "to the side of the cooked food"],
+        ["Red", "Yellow", "Blue", "Green"],
+        ["Shellfish", "Apples", "Onions", "Green Onions"],
+        ["Egg", "Red40", "Grapes", "Toast"]
     ]
 } 
 
