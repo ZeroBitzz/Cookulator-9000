@@ -1,7 +1,4 @@
 /* TODO: 1. style all new elements at the end of the game accordingly and make ingredients and measurements more organized. Maybe like two lists side my side*/
-/* TODO: 2. fix images so they don't shrink when the page resizes */
-/* TODO: 3. change the game questions to real cooking concept questions */
-/* TODO: 4. style the game questions and answers */
 /* TODO: 5. maybe try and make the initial page have a little less height so you don't have to scroll */
 
 
@@ -71,6 +68,7 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    width: 39%;
     left: 100px;
     font-size: 30px;
     display: none;
@@ -90,7 +88,7 @@ h2 {
     background-color: black;
     color: greenyellow;
     font-size: 20px;
-    width: 200px;
+    width: auto;
     height: 50px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -118,7 +116,7 @@ h2 {
 }
 #retry-button:hover {
     background-color: grey;
-    color: rgb(0, 255, 0);
+    color: black;
     cursor: pointer;
 }
 
@@ -129,8 +127,7 @@ h2 {
 
 #random-recepie {
     display: flex;
-    /* background-color:blueviolet; */
-    color:rgb(255, 0, 242);
+       color:rgb(255, 0, 242);
     text-decoration: underline;
 }
 
@@ -186,7 +183,7 @@ h1 {
     margin-right: auto;
     width:39%;
     object-fit: cover;
-    border: 5px solid greenyellow;
+    border: 25px solid greenyellow;
 }
 
 .retry {
