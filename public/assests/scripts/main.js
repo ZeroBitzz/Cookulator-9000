@@ -5,10 +5,6 @@ import { askQuestion } from './askQuestion.js'
 let initialButton = document.getElementById("initial-button")
 initialButton.addEventListener("click", jsGame)
 
-// CURRENT DATE API
-let time = document.getElementById('time')
-time.innerHTML = dayjs().format('MMMM DD YYYY')
-
 // GLOBAL DOM VARIABLES
 let gameSection = document.getElementById("game-content-section")
 let incorrectAnswerElement = document.getElementById("incorrect-score")
@@ -21,6 +17,13 @@ let retryButtonElement = document.getElementById("retry-button")
 export let questionsLeft = 8
 export let incorrectAnswers = 0
 export let correctAnswers = 0
+
+const keyword = 'salmon'
+fetch(`/images?search=${keyword}`)
+.then(response => response.json())
+.then(result => {
+    document.getElementById('foodImg').src = result.images_results[0].thumbnail
+})
 
 // RELOAD PAGE HELPER FUNCTION
 function reloadPage() { location.reload() } // reloads page when called
@@ -61,13 +64,13 @@ function showRecipe() {
     let measurementsElement = document.createElement("h6")
 
     // NESTED TERNARY DETERMINING WHICH CATEGORY THE MEAL WILL COME FROM
-    correctAnswers === 8 
+    correctAnswers === 8
     ? mealCategory = 'Seafood'
-        : (correctAnswers === 7 || correctAnswers === 6) 
+        : (correctAnswers === 7 || correctAnswers === 6)
         ? mealCategory = 'Dessert'
-            : (correctAnswers === 5 || correctAnswers === 4) 
+            : (correctAnswers === 5 || correctAnswers === 4)
             ? mealCategory = 'Pork'
-                : (correctAnswers === 3 || correctAnswers === 2) 
+                : (correctAnswers === 3 || correctAnswers === 2)
                 ? mealCategory = 'Vegetarian'
     : mealCategory = 'Breakfast'
 
@@ -84,7 +87,7 @@ function showRecipe() {
             let meal = data.meals[0]
             let ingredients = []
             let measurementsArr = []
-        
+
             for(const key in meal) { // for loops that grab the ingredients and measurements of the meal to display
                 for(let i = 1; i <= 20; i++) {
                     if(key === `strIngredient${i}` && meal[key] != "" && meal[key] != null && meal[key] != " ") {
@@ -99,15 +102,16 @@ function showRecipe() {
             ingredientsElement.innerHTML = ingredients
             measurementsElement.innerHTML = data.meals[0].strMeasure1
             recipeBulk.innerHTML = data.meals[0].strInstructions
-    
+
             mealTitleElement.append(recipeName)
             recipeMeasurementsElement.append(measurementsArr)
             mealIngredientsElement.append(ingredients)
             recipeInstructionElement.append(recipeBulk)
-        
+
         })
     })
-    
+
+
 
 }
 
