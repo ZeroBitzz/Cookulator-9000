@@ -11,3 +11,7 @@ simple server for searching images from serpapi.com API
 ## development
 use `npx nodemon` while developing instead of `node app`
 `nodemon` restarts node on file change
+
+## API key
+https://serpapi.com/
+Go down to "Easy integration" and copy the api_key part of the uri

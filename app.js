@@ -1,7 +1,6 @@
 import nodeFetch from 'node-fetch'
 import express from 'express'
 import dotenv from 'dotenv'
-import cors from 'cors'
 import path from 'path'
 
 dotenv.config() // setup .env environment variables
@@ -29,5 +28,5 @@ app.get('/helloworld', (req, res, next) => {
 })
 
 // start the server
-const port = 8080
+const port = 8081
 app.listen(port, () => console.log(`listing on port: ${port}`))

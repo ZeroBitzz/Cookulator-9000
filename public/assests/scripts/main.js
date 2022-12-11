@@ -18,12 +18,7 @@ export let questionsLeft = 8
 export let incorrectAnswers = 0
 export let correctAnswers = 0
 
-const keyword = 'salmon'
-fetch(`/images?search=${keyword}`)
-.then(response => response.json())
-.then(result => {
-    document.getElementById('foodImg').src = result.images_results[0].thumbnail
-})
+
 
 // RELOAD PAGE HELPER FUNCTION
 function reloadPage() { location.reload() } // reloads page when called
@@ -49,7 +44,7 @@ function jsGame() {
 }
 
 // the API
-function showRecipe() {
+async function showRecipe() {
     let mealCategory
     let randomMealId
     const mealTitleElement = document.getElementById("random-recipe-title")
@@ -73,18 +68,17 @@ function showRecipe() {
                 : (correctAnswers === 3 || correctAnswers === 2)
                 ? mealCategory = 'Vegetarian'
     : mealCategory = 'Breakfast'
-
+    let meal
     // FETCH REQUESTS FOR GETTING A RANDOM MEAL BASED ON PREVIOUS SCORE ABOVE WITH THE MEAL CATEGORY VARIABLE
-    fetch(`https:www.themealdb.com/api/json/v1/1/filter.php?c=${mealCategory}`) // gets the meals from the category determined above
+   await fetch(`https:www.themealdb.com/api/json/v1/1/filter.php?c=${mealCategory}`) // gets the meals from the category determined above
     .then(response => response.json())
-    .then(data => {
+    .then(async (data) => {
         randomMealId = data.meals[Math.floor(Math.random() * data.meals.length)].idMeal // gets a random meal from that category
 
-        fetch(`https:www.themealdb.com/api/json/v1/1/lookup.php?i=${randomMealId}`) // uses the random meal id to get that meal from the API
+       await fetch(`https:www.themealdb.com/api/json/v1/1/lookup.php?i=${randomMealId}`) // uses the random meal id to get that meal from the API
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            let meal = data.meals[0]
+            meal = data.meals[0]
             let ingredients = []
             let measurementsArr = []
 
@@ -110,7 +104,16 @@ function showRecipe() {
 
         })
     })
+    console.log()
+    const keyword = meal.strMeal
 
+fetch(`/images?search=${keyword}`)
+.then(response => response.json())
+.then(result => {
+    document.getElementById('foodImg').src = result.images_results[0].thumbnail
+})
+
+    
 
 
 }
