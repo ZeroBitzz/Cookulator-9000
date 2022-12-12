@@ -87,15 +87,15 @@ async function showRecipe() {
             for(const key in meal) { // for loops that grab the ingredients and measurements of the meal to display
                 for(let i = 1; i <= 20; i++) {
                     if(key === `strIngredient${i}` && meal[key] != "" && meal[key] != null && meal[key] != " ") {
-                        ingredients.push(meal[key])
+                        ingredients.push(" " + meal[key])
                     }else if(key === `strMeasure${i}` && meal[key] != "" && meal[key] != null && meal[key] != " "){
-                        measurementsArr.push(meal[key])
+                        measurementsArr.push(" " + meal[key])
                     }
                 }
             }
 
             recipeName.innerHTML = data.meals[0].strMeal
-            ingredientsElement.innerHTML = ingredients
+            ingredientsElement.innerHTML = ingredients 
             measurementsElement.innerHTML = data.meals[0].strMeasure1
             recipeBulk.innerHTML = data.meals[0].strInstructions
 
