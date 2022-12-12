@@ -28,7 +28,7 @@ let questionIndex = { // object containing questions and answers for game
         ["saute", "fat cookin", "simmer", "pastry"],
         ["Olives", "Grapes", "Almonds", "Virgins"],
         ["Honey", "Apples", "Bread", "Milk"],
-        ["40-140", "100-200", "30-80", "5-9"],
+        ["40-140 F", "100-200 F", "30-80 F", "5-9 F"],
         ["Below the cooked foods", "Above the cooked foods", "inside the cooked food", "to the side of the cooked food"],
         ["Red", "Yellow", "Blue", "Green"],
         ["Shellfish", "Apples", "Onions", "Green Onions"],

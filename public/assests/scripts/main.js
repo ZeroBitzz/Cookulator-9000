@@ -1,5 +1,9 @@
 // IMPORTS
 import { askQuestion } from './askQuestion.js'
+import { updateHistory } from './updateHistory.js'
+
+// SEES WHAT MEAL YOU GOT LAST GAME, IF NONE, THEN DISPLAY NOTHING
+updateHistory()
 
 // EVENT LISTENER TO START THE GAME
 let initialButton = document.getElementById("initial-button")
@@ -17,9 +21,6 @@ let retryButtonElement = document.getElementById("retry-button")
 export let questionsLeft = 8
 export let incorrectAnswers = 0
 export let correctAnswers = 0
-
-// SETS THE RECIPE HISTORY ELEMENTS ON THE INITIAL PAGE
-
 
 // RELOAD PAGE HELPER FUNCTION
 function reloadPage() { location.reload() } // reloads page when called
@@ -112,9 +113,9 @@ async function showRecipe() {
     .then(result => {
         document.getElementById('foodImg').src = result.images_results[0].thumbnail
     })
-
     
-    console.log(meal)
+    // updates local storage with the new meal
+    updateHistory(meal.strMeal)
 }
 
 // END GAME FUNCTION

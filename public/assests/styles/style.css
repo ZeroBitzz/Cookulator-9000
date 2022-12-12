@@ -1,7 +1,3 @@
-/* TODO: 1. style all new elements at the end of the game accordingly and make ingredients and measurements more organized. Maybe like two lists side my side*/
-/* TODO: 5. maybe try and make the initial page have a little less height so you don't have to scroll */
-
-
 /* BASIC TAGS */
 * {
     font-family: 'Noto Serif', serif;
@@ -39,11 +35,12 @@ h1 {
 #chef {
     display: block;
     margin-left: auto;
+    margin-bottom: 5px;
     margin-right: auto;
-    width:80%;
+    width:35%;
     height: auto;
     object-fit: cover;
-    
+    border: 5px solid black;
 }
 
 #initial-title-h1 {
@@ -66,7 +63,7 @@ h1 {
     color: black;
     font-size: 30px;
     width: 120px;
-    border-radius: 90px;
+    border-radius: 30px;
     
 }
 #initial-button:hover {
@@ -84,7 +81,7 @@ h1 {
     justify-content: center;
     order: 0;
     text-align: center;
-    margin-top: 40%;
+    margin-top: 20%;
     
 }
 
@@ -122,6 +119,10 @@ h1 {
     
 }
 
+#instructions-span{
+    margin-top: 40px;
+}
+
 #retry-button {
     background-color: rgb(230, 29, 22);
     color: black;
@@ -129,16 +130,6 @@ h1 {
     padding-left: 5px;
     border-radius: 10px;
     width: fit-content;
-}
-
-#results {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:20%;
-    height: auto;
-    object-fit: cover;
-    
 }
 
 #retry-button:hover {
@@ -175,7 +166,7 @@ h1 {
     width: 50%;
 }
 
-.lowertxt {
+#game-description {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -199,3 +190,17 @@ h1 {
     width: 50%;
 }
 
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: grey;
+}
+::-webkit-scrollbar-thumb {
+    background: darkred;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
