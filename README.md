@@ -8,8 +8,7 @@ Test your knowledge of cooking concepts and trivia to see what kind of recipe yo
 
 `ctrl + c` to stop server
 ## API KEY
-To get the api key, go to serpapi.com, scroll down to easy integration, and in the uri grab the api key portion 
-An example of the .env file api key: SERP_API_KEY=32;lk2n3;423gv4l22;35k2j53vb;
+To get the api key, go to serpapi.com, scroll down to easy integration, and in the uri grab the api key portion. An example of the .env file api key: SERP_API_KEY=32;lk2n3;423gv4l22;35k2j53vb;
 
 ## development
 use `npx nodemon` while developing instead of `node app`
