@@ -57,6 +57,7 @@ async function showRecipe() {
     let ingredientsElement = document.createElement("h4")
     let recipeBulk = document.createElement("h5")
     let measurementsElement = document.createElement("h6")
+    let meal
 
     // NESTED TERNARY DETERMINING WHICH CATEGORY THE MEAL WILL COME FROM
     correctAnswers === 8
@@ -68,14 +69,14 @@ async function showRecipe() {
                 : (correctAnswers === 3 || correctAnswers === 2)
                 ? mealCategory = 'Vegetarian'
     : mealCategory = 'Breakfast'
-    let meal
+    
     // FETCH REQUESTS FOR GETTING A RANDOM MEAL BASED ON PREVIOUS SCORE ABOVE WITH THE MEAL CATEGORY VARIABLE
-   await fetch(`https:www.themealdb.com/api/json/v1/1/filter.php?c=${mealCategory}`) // gets the meals from the category determined above
+    await fetch(`https:www.themealdb.com/api/json/v1/1/filter.php?c=${mealCategory}`) // gets the meals from the category determined above
     .then(response => response.json())
     .then(async (data) => {
         randomMealId = data.meals[Math.floor(Math.random() * data.meals.length)].idMeal // gets a random meal from that category
 
-       await fetch(`https:www.themealdb.com/api/json/v1/1/lookup.php?i=${randomMealId}`) // uses the random meal id to get that meal from the API
+        await fetch(`https:www.themealdb.com/api/json/v1/1/lookup.php?i=${randomMealId}`) // uses the random meal id to get that meal from the API
         .then(response => response.json())
         .then(data => {
             meal = data.meals[0]
@@ -104,17 +105,12 @@ async function showRecipe() {
 
         })
     })
-    console.log()
-    const keyword = meal.strMeal
-
-fetch(`/images?search=${keyword}`)
-.then(response => response.json())
-.then(result => {
-    document.getElementById('foodImg').src = result.images_results[0].thumbnail
-})
-
     
-
+    fetch(`/images?search=${meal.strMeal}`)
+    .then(response => response.json())
+    .then(result => {
+        document.getElementById('foodImg').src = result.images_results[0].thumbnail
+    })
 
 }
 

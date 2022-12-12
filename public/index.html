@@ -10,17 +10,11 @@
     <title>COOKULATOR9000</title>
 </head>
 <body>
-    <!-- TIME API -->
 
     <!-- INITIAL MENU SCREEN SECTION -->
     <section id="initial-screen-section">
         <h1 id="initial-title-h1">COOKULATOR9000</h1>
-        <img src="/assests/images/cooker.jpg.jpg" alt="TheChef" class="Chef">
-        <div id="initial-desc">
-            <span id="initial-span" >
-                
-            </span>
-        </div>
+        <img src="/assests/images/cooker.jpg.jpg" alt="TheChef" id="chef">
         <button id="initial-button" class="btn">CLICK TO BEGIN</button>
         <h1 class="lowertxt">Get a recipe based on your level of cooking skill by taking this quiz</h1>
         
@@ -35,7 +29,6 @@
             </subsection>
         </section>
         
-        
         <!-- MAIN GAME SECTION -->
         <section id="game-content-section">
             <span id="game-question"></span>
@@ -47,7 +40,7 @@
         
         <!-- GAME OVER SECTION -->
         <section id="end-game-section">
-            <img src="/assests/images/results.jpg" alt="TheChef" class="Results">
+            <img src="/assests/images/results.jpg" alt="TheChef" id="results">
             <span id="score-span"></span>
             <span id="time-score"></span>
             <span id="correct-score"></span>
@@ -55,6 +48,7 @@
             
             <span>You Got</span>
             <span id="random-recipe-title"></span>
+            <span><img id="foodImg" src="/assests/images/loader.gif"></span>
             <span>Ingredients</span>
             <span id="random-recipe-ingredients"></span>
             <span>Measurements</span>
@@ -62,7 +56,6 @@
             <span>Instructions</span>
             <span id="random-recipe-instruction"></span>
             
-            <img id="foodImg" src="/assests/images/loader.gif">
         <span id="retry-button" class="retry">RETRY</span>
     </section>
 

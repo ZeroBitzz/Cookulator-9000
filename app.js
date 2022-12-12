@@ -23,10 +23,6 @@ app.get('/images', async (req, res, next) => {
   res.json(result)
 })
 
-app.get('/helloworld', (req, res, next) => {
-  res.send('bingbong')
-})
-
 // start the server
 const port = 8081
 app.listen(port, () => console.log(`listing on port: ${port}`))
