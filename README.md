@@ -1,5 +1,5 @@
-
-simple server for searching images from serpapi.com API
+## Description
+Test your knowledge of cooking concepts and trivia to see what kind of recipe you will receive.
 
 ## server setup steps
 1. install dependencies `npm i` (shorthand for `npm install`)(you may also need to install node js from the website if you haven't already)
