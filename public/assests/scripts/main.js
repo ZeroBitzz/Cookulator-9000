@@ -18,6 +18,7 @@ export let questionsLeft = 8
 export let incorrectAnswers = 0
 export let correctAnswers = 0
 
+// SETS THE RECIPE HISTORY ELEMENTS ON THE INITIAL PAGE
 
 
 // RELOAD PAGE HELPER FUNCTION
@@ -112,6 +113,8 @@ async function showRecipe() {
         document.getElementById('foodImg').src = result.images_results[0].thumbnail
     })
 
+    
+    console.log(meal)
 }
 
 // END GAME FUNCTION

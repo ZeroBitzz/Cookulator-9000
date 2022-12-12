@@ -3,7 +3,7 @@ simple server for searching images from serpapi.com API
 
 ## server setup steps
 1. install dependencies `npm i` (shorthand for `npm install`)
-2. make your .env file `cp .env.defaults .env` and set api key `SERP_API_KEY=`
+2. make your .env file `cp .env.defaults .env` and set api key(see below to get key from website) `SERP_API_KEY=`
 3. start server `node app`
 
 ## API
