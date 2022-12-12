@@ -6,6 +6,9 @@ simple server for searching images from serpapi.com API
 2. make your .env file `cp .env.defaults .env` and set api key `SERP_API_KEY=`
 3. start server `node app`
 
+## API
+to get the api key, go to serpapi.com, scroll down to easy integration, and in the uri grab the api key portion 
+
 `ctrl + c` to stop server
 
 ## development
