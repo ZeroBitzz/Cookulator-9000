@@ -15,8 +15,7 @@ app.use(express.static(__dirname + '/public')); // load static files from public
 
 // express get route /images?search=
 app.get('/images', async (req, res, next) => {
-  const {search, name} = req.query
-  console.log(name)
+  const {search} = req.query
   const imgSearchUrl = `https://serpapi.com/search.json?engine=google&q=${search}&location=Austin%2C+Texas%2C+United+States&google_domain=google.com&gl=us&hl=en&safe=active&tbm=isch&ijn=1&device=desktop&api_key=${apiKey}`
   const response = await nodeFetch(imgSearchUrl)
   const result = await response.json();
