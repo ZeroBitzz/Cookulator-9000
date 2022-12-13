@@ -73,7 +73,7 @@ async function showRecipe() {
     : mealCategory = 'Breakfast'
     
     // FETCH REQUESTS FOR GETTING A RANDOM MEAL BASED ON PREVIOUS SCORE ABOVE WITH THE MEAL CATEGORY VARIABLE
-    await fetch(`https:www.themealdb.com/api/json/v1/1/filter.php?c=${mealCategory}`) // gets the meals from the category determined above
+    await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${mealCategory}`) // gets the meals from the category determined above
     .then(response => response.json())
     .then(async (data) => {
         randomMealId = data.meals[Math.floor(Math.random() * data.meals.length)].idMeal // gets a random meal from that category
