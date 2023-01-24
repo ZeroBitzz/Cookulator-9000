@@ -1,12 +1,8 @@
 ## Description
-Test your knowledge of cooking concepts and trivia to see what kind of recipe you will receive.
+If you want a recipe based on your level of cooking expertise, then use this app. It will quiz you on your cooking knowledge, then based off of your score from the quiz you will recieve a recipe.
 
-## server setup steps
-1. install dependencies `npm i` (shorthand for `npm install`)(you may also need to install node js from the website if you haven't already)
-2. make your .env file `cp .env.defaults .env` and set api key(see below to get key from website) `SERP_API_KEY=`
-3. start server `node app` or `npx nodemon`(so it updates every time you edit the code)
+## Link to url
+http://24.199.69.101/
 
-`ctrl + c` to stop server
-## API KEY
-To get the api key, go to serpapi.com, scroll down to easy integration, and in the uri grab the api key portion of that uri.
-
+## Preview of site
+![Screenshot 2023-01-23 213527](https://user-images.githubusercontent.com/35615510/214213021-ff4d5ec2-93d3-4455-b796-a031dce50fb7.png)
